@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" id="KGk-i7-Jjw" customClass="MemberNameTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MemberName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1H-Rt-Buh">
+                        <rect key="frame" x="39" y="11" width="110" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D1H-Rt-Buh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="E4C-tU-8ph"/>
+                    <constraint firstItem="D1H-Rt-Buh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="39" id="QuX-2b-ZZQ"/>
+                    <constraint firstAttribute="bottom" secondItem="D1H-Rt-Buh" secondAttribute="bottom" constant="11.5" id="VJ8-72-lQE"/>
+                    <constraint firstItem="D1H-Rt-Buh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="74" id="dtX-NA-X6r"/>
+                    <constraint firstAttribute="trailing" secondItem="D1H-Rt-Buh" secondAttribute="trailing" constant="204" id="qPQ-sY-wcr"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="dtX-NA-X6r"/>
+                        <exclude reference="qPQ-sY-wcr"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="memberNameLabel" destination="D1H-Rt-Buh" id="9Dh-Qk-tWU"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

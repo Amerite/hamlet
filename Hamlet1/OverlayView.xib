@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="overlayView" destination="nOH-ZY-0by" id="M5r-my-2kx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nOH-ZY-0by">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72T-56-cm1">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <barButtonItem title="Feedback" id="MaO-xW-NM2">
+                            <color key="tintColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pushFeedback:" destination="-1" id="9pc-s1-h3f"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="464-fk-PPV"/>
+                        <barButtonItem title="Contacts" id="lme-qA-QkG">
+                            <color key="tintColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pushContacts:" destination="-1" id="dhR-Rf-bJG"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-bZ-eaL">
+                    <rect key="frame" x="127" y="45" width="67" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushSettings:" destination="-1" eventType="touchUpInside" id="Dcg-Ih-nQ6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqO-NM-6Id">
+                    <rect key="frame" x="16" y="45" width="52" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Album">
+                        <color key="titleColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushAlbum:" destination="-1" eventType="touchUpInside" id="nRa-mS-Squ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvV-ca-TEE">
+                    <rect key="frame" x="258" y="45" width="39" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Cam">
+                        <color key="titleColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="camTurn:" destination="-1" eventType="touchUpInside" id="PUN-14-CEx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-wL-V6M">
+                    <rect key="frame" x="134" y="472" width="52" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Snap!">
+                        <color key="titleColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="takePic:" destination="-1" eventType="touchUpInside" id="Qn7-Ea-lPQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QuE-bZ-eaL" secondAttribute="trailing" constant="126" id="JNw-HS-SaV"/>
+                <constraint firstAttribute="trailing" secondItem="hvV-ca-TEE" secondAttribute="trailing" constant="23" id="Qr7-T2-2hb"/>
+                <constraint firstItem="oqO-NM-6Id" firstAttribute="top" secondItem="nOH-ZY-0by" secondAttribute="top" constant="45" id="RSF-Bk-FgP"/>
+                <constraint firstAttribute="bottom" secondItem="72T-56-cm1" secondAttribute="bottom" id="S89-R3-qpQ"/>
+                <constraint firstItem="QuE-bZ-eaL" firstAttribute="leading" secondItem="nOH-ZY-0by" secondAttribute="leading" constant="127" id="ZgP-CR-5jT"/>
+                <constraint firstItem="hvV-ca-TEE" firstAttribute="top" secondItem="nOH-ZY-0by" secondAttribute="top" constant="45" id="aKc-A6-3VG"/>
+                <constraint firstAttribute="trailing" secondItem="72T-56-cm1" secondAttribute="trailing" id="oGL-oS-xFe"/>
+                <constraint firstItem="72T-56-cm1" firstAttribute="leading" secondItem="nOH-ZY-0by" secondAttribute="leading" id="t1A-qd-mCJ"/>
+                <constraint firstItem="72T-56-cm1" firstAttribute="top" secondItem="oqO-NM-6Id" secondAttribute="bottom" constant="445" id="uFw-ze-a4q"/>
+                <constraint firstItem="oqO-NM-6Id" firstAttribute="leading" secondItem="nOH-ZY-0by" secondAttribute="leading" constant="16" id="v25-rC-GWE"/>
+                <constraint firstItem="QuE-bZ-eaL" firstAttribute="top" secondItem="nOH-ZY-0by" secondAttribute="top" constant="45" id="xYW-Z1-pua"/>
+            </constraints>
+            <point key="canvasLocation" x="307" y="854"/>
+        </view>
+        <barButtonItem title="Item" id="wm6-ks-Ox1"/>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

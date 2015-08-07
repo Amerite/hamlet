@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBLoginDialogViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="4ZZ-W5-Lpj" id="jRY-Od-l0p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-W5-Lpj">
+                    <rect key="frame" x="0.0" y="22" width="320" height="519.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4ZZ-W5-Lpj" secondAttribute="height" multiplier="320:519" id="aH8-T8-6WW"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="44v-V7-ODF"/>
+                    </connections>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzN-TJ-8Wu">
+                    <rect key="frame" x="140" y="538" width="40" height="30"/>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="DjQ-fT-S5I"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4ZZ-W5-Lpj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="4OF-TH-U9R"/>
+                <constraint firstItem="4ZZ-W5-Lpj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H81-GV-5Ud"/>
+                <constraint firstAttribute="trailing" secondItem="4ZZ-W5-Lpj" secondAttribute="trailing" id="JgE-Pr-8IW"/>
+                <constraint firstAttribute="bottom" secondItem="RzN-TJ-8Wu" secondAttribute="bottom" id="Lnt-9y-yw2"/>
+                <constraint firstAttribute="trailing" secondItem="RzN-TJ-8Wu" secondAttribute="trailing" constant="140" id="SRf-K0-T1D"/>
+                <constraint firstItem="RzN-TJ-8Wu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="140" id="egK-cq-I1j"/>
+            </constraints>
+            <point key="canvasLocation" x="259" y="351"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

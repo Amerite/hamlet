@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="y4I-5U-MZ2" customClass="HeaderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y4I-5U-MZ2" id="pHI-M0-3O5">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MP8-IV-Ro6">
+                        <rect key="frame" x="8" y="10" width="37" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.29411764709999999" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="MP8-IV-Ro6" secondAttribute="bottom" constant="9.5" id="1r4-c9-KUQ"/>
+                    <constraint firstItem="MP8-IV-Ro6" firstAttribute="top" secondItem="pHI-M0-3O5" secondAttribute="top" constant="10" id="AiS-rT-NcY"/>
+                    <constraint firstItem="MP8-IV-Ro6" firstAttribute="leading" secondItem="pHI-M0-3O5" secondAttribute="leading" constant="8" id="Wnf-wB-EfD"/>
+                    <constraint firstAttribute="centerY" secondItem="MP8-IV-Ro6" secondAttribute="centerY" constant="-0.25" id="c1L-sv-v0n"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MP8-IV-Ro6" secondAttribute="trailing" constant="267" id="caZ-Yg-k12"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="c1L-sv-v0n"/>
+                        <exclude reference="caZ-Yg-k12"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="sectionTitle" destination="MP8-IV-Ro6" id="VG6-A1-Vyk"/>
+            </connections>
+            <point key="canvasLocation" x="773" y="211"/>
+        </tableViewCell>
+    </objects>
+</document>

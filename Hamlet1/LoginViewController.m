@@ -16,6 +16,7 @@
 
 @implementation LoginViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -28,7 +29,11 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:NO ];
     
-    
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    [self.view addSubview:loginButton];
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{

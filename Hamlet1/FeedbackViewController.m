@@ -24,8 +24,10 @@
         self.navigationItem.rightBarButtonItem = nil;
         self.picture.image = nil;
         self.questionLabel.hidden = YES;
-        self.noBar.hidden =YES;
-        self.yesBar.hidden =YES;
+        self.noBar.hidden = YES;
+        self.yesBar.hidden = YES;
+        self.yesBar.progress = 0.0;
+        self.noBar.progress = 0.0;
 
     } else
     {

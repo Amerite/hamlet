@@ -16,11 +16,13 @@
 
 @property (strong, nonatomic) NSArray *userLibrary;
 
-@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (strong, nonatomic) User *currentUser;
 
 - (IBAction)login:(id)sender;
+- (void) isCorrectLogin: (BOOL)correctLogin email:(NSString *)email;
 
+- (BOOL) testEmail: (NSString *)email;
 
 @end

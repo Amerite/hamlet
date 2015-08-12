@@ -48,8 +48,8 @@
     [tempUserLibrary addObjectsFromArray:_library];
     
     //Create User to add to Array :
-    if ([user.username length] >0 &&[user.email length] >0 &&[user.password length] >0) {
-        User *newUser = [User userWithUsername:user.username email:user.email password:user.password friends:user.userFriends favorites : @[]];
+    if ([user.username length] >0 &&[user.userEmail length] >0 &&[user.userPassword length] >0) {
+        User *newUser = [User userWithUsername:user.username email:user.userEmail password:user.userPassword friends:user.userFriends favorites : @[]];
         [tempUserLibrary addObject:newUser];
         _library = tempUserLibrary;
         [[_library objectAtIndex:([_library count] -1)] userDetails];

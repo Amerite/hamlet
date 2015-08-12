@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "User.h"
-#import "UserLibrary.h"
+//#import "User.h"
+//#import "UserLibrary.h"
 
 @interface SignUpViewController : UIViewController
 

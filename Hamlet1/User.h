@@ -12,8 +12,8 @@
 @interface User : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *username;
-@property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *userEmail;
+@property (nonatomic, strong) NSString *userPassword;
 
 @property (nonatomic, assign, getter=isCurrentUser) BOOL currentUser;
 

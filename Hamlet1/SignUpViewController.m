@@ -51,18 +51,38 @@
     }
     else {
         
-        //create a new user
-        User *newUser = [User userWithUsername:username email:email password:password friends:@[] favorites:@[]];
+//        //create a new user
+//        User *newUser = [User userWithUsername:username email:email password:password friends:@[] favorites:@[]];
+//        
+//        //add to userlibrary
+//        UserLibrary *userLibrary = [[UserLibrary alloc] init];
+//        [userLibrary addUser:newUser];
+//        NSLog(@"newLibrary : %lu", (unsigned long)[userLibrary.library count]);
+//        
+//        //return library and view to Login
+//        LoginViewController *loginController = (LoginViewController *)self.navigationController.viewControllers[0];
+//        loginController.userLibrary = userLibrary.library;
+
         
-        //add to userlibrary
-        UserLibrary *userLibrary = [[UserLibrary alloc] init];
-        [userLibrary addUser:newUser];
-        NSLog(@"newLibrary : %lu", (unsigned long)[userLibrary.library count]);
+//server test
+        NSDictionary *newUserInfo = [NSDictionary dictionaryWithObjectsAndKeys: email, @"email", password, @"password", username, @"nick_name", nil];
+        NSError *error = [[NSError alloc] init];
+        NSData *jsonSignup = [NSJSONSerialization dataWithJSONObject:newUserInfo options:kNilOptions error:&error];
         
-        //return library and view to Login
-        LoginViewController *loginController = (LoginViewController *)self.navigationController.viewControllers[0];
-        loginController.userLibrary = userLibrary.library;
-        [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:NO];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:@"http://hamlet.nomits.com:1111/authenticate/signup"]];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:jsonSignup];
+        NSLog(@"JSON %@", newUserInfo);
+        
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+            NSLog(@"requestReply : %@", requestReply);
+        }]resume];
+        
+        
+        //[self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:NO];
     }
     
 }

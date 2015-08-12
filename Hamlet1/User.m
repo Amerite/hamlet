@@ -14,8 +14,8 @@
 + (User *)userWithUsername:(NSString *)username email:(NSString *)email password:(NSString *)password friends:(NSArray *) friends favorites:(NSArray *)favorites{
     User *newUser = [[self alloc] init];
     newUser.username = username;
-    newUser.email = email;
-    newUser.password = password;
+    newUser.userEmail = email;
+    newUser.userPassword = password;
     
     newUser.currentUser = NO;
     newUser.userFriends = [NSArray arrayWithArray:friends];
@@ -37,7 +37,7 @@
 
 
 - (void)userDetails{
-    NSLog(@"User : %@ %@ %@ %d %@ %@", _username, _password, _email, _currentUser, _userFriends, _favoriteFriends);
+    NSLog(@"User : %@ %@ %@ %d %@ %@", _username, _userPassword, _userEmail, _currentUser, _userFriends, _favoriteFriends);
     
 }
 
@@ -55,8 +55,8 @@ NSString *const FavoritesKey = @"FavoritesKey";
     self = [super init];
     if (self) {
         _username = [aDecoder decodeObjectForKey:UsernameKey];
-        _email = [aDecoder decodeObjectForKey:EmailKey];
-        _password = [aDecoder decodeObjectForKey:PasswordKey];
+        _userEmail = [aDecoder decodeObjectForKey:EmailKey];
+        _userPassword = [aDecoder decodeObjectForKey:PasswordKey];
         _currentUser = [aDecoder decodeObjectForKey:CurrentUserKey];
         _userFriends = [aDecoder decodeObjectForKey:FriendsKey];
         _favoriteFriends = [aDecoder decodeObjectForKey:FavoritesKey];
@@ -68,8 +68,8 @@ NSString *const FavoritesKey = @"FavoritesKey";
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.username forKey:UsernameKey];
-    [aCoder encodeObject:self.email forKey:EmailKey];
-    [aCoder encodeObject:self.password forKey:PasswordKey];
+    [aCoder encodeObject:self.userEmail forKey:EmailKey];
+    [aCoder encodeObject:self.userPassword forKey:PasswordKey];
     [aCoder encodeBool:self.currentUser forKey:CurrentUserKey];
     [aCoder encodeObject:self.userFriends forKey:FriendsKey];
     [aCoder encodeObject:self.favoriteFriends forKey:FavoritesKey];

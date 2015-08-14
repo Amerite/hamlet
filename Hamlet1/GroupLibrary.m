@@ -31,6 +31,8 @@
     return self;
 }
 
+
+//  Add a new group to the library
 - (void) addGroup:(Group *) group {
     //Create and initialize temp Array :
     NSMutableArray *tempGroupLibrary = [[NSMutableArray alloc] init];
@@ -47,10 +49,13 @@
 }
 
 
+//  Search for groups in library with Group Owner username
 + (NSArray *) retrieveGroupsFromUser: (NSString *)username {
+    //  Create GroupLibrary instance and array for results
     GroupLibrary *groupLibrary = [[GroupLibrary alloc] init];
     NSMutableArray *groupsForUser = [[NSMutableArray alloc] init];
     
+    //  Compare Owner to username
     for (Group* groups in groupLibrary.library) {
         if ([groups.groupOwner isEqualToString:username]) {
             [groupsForUser addObject:groups];

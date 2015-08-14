@@ -10,6 +10,8 @@
 
 @implementation Group
 
+
+//  Initialize Group instance
 + (Group *)groupWithOwner:(NSString *)owner name:(NSString *)groupname members:(NSArray *)members isFavorite:(BOOL)isFav{
     Group *newGroup = [[Group alloc] init];
     
@@ -18,12 +20,11 @@
     newGroup.groupMembers = [NSArray arrayWithArray:members];
     newGroup.isFavorite = isFav;
     
-    //order alphabetically the members :
-    return newGroup;
-    
+    return newGroup;    
 }
 
 
+//  NSLog Group characteristics
 - (void) groupDetails{
     NSLog(@"Group : owner %@ \n name %@ \n members %@ favorite %d", _groupOwner, _groupName, _groupMembers, _isFavorite);
 }

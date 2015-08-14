@@ -41,7 +41,7 @@
 }
 
 
-
+//  Add a user into the library
 - (void) addUser:(User *) user {
     //Create and initialize temp Array :
     NSMutableArray *tempUserLibrary = [[NSMutableArray alloc] init];

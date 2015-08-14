@@ -196,13 +196,13 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
-		C98F33981B68BB36005EE896 /* Send */ = {
+		C98F33981B68BB36005EE896 /* Image Edit before Send */ = {
 			isa = PBXGroup;
 			children = (
 				C98F33991B68BB62005EE896 /* ImageEditViewController.h */,
 				C98F339A1B68BB62005EE896 /* ImageEditViewController.m */,
 			);
-			name = Send;
+			name = "Image Edit before Send";
 			sourceTree = "<group>";
 		};
 		C98F33A21B68C41F005EE896 /* tableCells */ = {
@@ -306,7 +306,7 @@
 				C9888A971B660EE900480DD1 /* Main */,
 				C9DD87531B7325390045356C /* Feedback */,
 				C9E97C461B6771B800ED3FB6 /* PhotoAlbum */,
-				C98F33981B68BB36005EE896 /* Send */,
+				C98F33981B68BB36005EE896 /* Image Edit before Send */,
 				C9888A901B65BBC000480DD1 /* Friends */,
 				C9B68F691B71E28E0003C8FE /* Inbox */,
 				C95186D81B61CCED005B5CC6 /* ContactPlus */,

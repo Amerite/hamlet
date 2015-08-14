@@ -5,6 +5,7 @@
 //  Created by Nomit on 2015. 7. 22..
 //  Copyright (c) 2015년 nomit. All rights reserved.
 //
+//  This is Login ViewController: User login, Facebook signin and link to Signup
 
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>

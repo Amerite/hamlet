@@ -17,8 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    //  Show navigation back button (to Login)
     [self.navigationItem setHidesBackButton:NO animated:NO];
 }
 
@@ -33,15 +33,22 @@
 }
 */
 
+
+
+//  At "Signup" button press
 - (IBAction)signup:(id)sender {
-    //test inputs
+    
+    //  Test user inputs format (Strings, email, password length and confirmation)
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *email = [self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *confirmPassword = [self.confirmPasswordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     
+    
     if ([username length] == 0 || [email length] == 0 || [password length] == 0 || [confirmPassword length] == 0 || ([password isEqualToString:confirmPassword] == NO) || ([password length] < 6) || ![self testEmail:email]) {
+        
+        //  Error message if format mistake
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Wrong input!"
                                                             message:@"Please make sure you entered a username, an e-mail address and a password"
                                                            delegate:nil
@@ -49,17 +56,19 @@
                                                   otherButtonTitles:nil];
         [alertView show];
     }
+    
+    //  Good user inputs. Test database for Sign Up
     else {
         
-        //create a new user
+        //  Local test: Create a new User instance
         User *newUser = [User userWithUsername:username email:email password:password friends:@[] favorites:@[]];
         
-        //add to userlibrary
+        //  Local test: Add to userlibrary
         UserLibrary *userLibrary = [[UserLibrary alloc] init];
         [userLibrary addUser:newUser];
         NSLog(@"newLibrary : %lu", (unsigned long)[userLibrary.library count]);
         
-        //return library and view to Login
+        //  (Local test:) Return library and view to Login
         LoginViewController *loginController = (LoginViewController *)self.navigationController.viewControllers[0];
         loginController.userLibrary = userLibrary.library;
         [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:NO];
@@ -67,6 +76,7 @@
     
 }
 
+//  Test email format
 - (BOOL) testEmail: (NSString *)email{
         NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9-]+\\.[A-Za-z]{2,4}";
         NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];

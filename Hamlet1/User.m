@@ -11,6 +11,8 @@
 @implementation User
 
 
+
+// Initialize User instance
 + (User *)userWithUsername:(NSString *)username email:(NSString *)email password:(NSString *)password friends:(NSArray *) friends favorites:(NSArray *)favorites{
     User *newUser = [[self alloc] init];
     newUser.username = username;
@@ -25,6 +27,7 @@
 }
 
 
+//  Change User status
 - (void)changeCurrentUser{
     if (_currentUser) {
         _currentUser = NO;
@@ -35,7 +38,7 @@
 }
 
 
-
+//  NSLog User characteristics
 - (void)userDetails{
     NSLog(@"User : %@ %@ %@ %d %@ %@", _username, _password, _email, _currentUser, _userFriends, _favoriteFriends);
     

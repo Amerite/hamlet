@@ -21,16 +21,21 @@
     return self;
 }
 
+
+//  Retrieve messages with username and user role
 -(NSArray *)retrieveMessagesWithUsername:(NSString *)username sender:(BOOL)sender{
     NSMutableArray *messagesList = [[NSMutableArray alloc] init];
     
+    //  Check the username in the library
     for (PictureMessage *message in self.library) {
         if (sender) {
+            //  if user is sender
             if ([message.sender.username isEqualToString:username]) {
                 [messagesList addObject:message];
             }
         }
         else if([message.recipients containsObject:username]){
+            //  if user is recipient
             [messagesList addObject:message];
         }
     }
